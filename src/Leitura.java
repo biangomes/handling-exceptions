@@ -3,17 +3,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Leitura {
-    public static String inData(String label) {
+    public static String inData(String label) throws IOException {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
         System.out.println(label);
         String s = "";
 
-        try {
-            s = br.readLine();
-        } catch (IOException e) {
-            System.out.println("Erro de entrada" + e);
-        }
+        s = br.readLine();
 
         return s;
     }
